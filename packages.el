@@ -8,6 +8,7 @@
 (defconst ora-packages
   ;; (cl-sort . #'string< :key (lambda (x) (symbol-name (if (consp x) (car x) x))))
   '(ace-link
+    (ciao :host github :repo "abo-abo/ciao")
     ace-popup-menu
     ace-window
     alert
@@ -130,4 +131,5 @@
   (load bootstrap-file nil 'nomessage))
 
 (dolist (package ora-packages)
-  (straight-use-package package))
+  (ignore-errors (straight-use-package package))
+  )
