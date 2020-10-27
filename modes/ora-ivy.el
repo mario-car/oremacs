@@ -6,6 +6,7 @@
 (ivy-mode 1)
 (csetq ivy-display-style 'fancy)
 ;; (csetq ivy-count-format "(%d/%d) ")
+(setq ivy-extra-directories nil)
 (csetq ivy-use-virtual-buffers t)
 (csetq counsel-find-file-ignore-regexp "\\(?:\\`\\(?:\\.\\|__\\)\\|elc\\|pyc$\\)")
 (csetq ivy-use-selectable-prompt t)
