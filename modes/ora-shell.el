@@ -10,6 +10,8 @@
 
 (ora-advice-add 'ansi-color-apply-on-region :before 'ora-ansi-color-apply-on-region)
 
+(setq comint-scroll-to-bottom-on-input t)
+
 (defun ora-ansi-color-apply-on-region (begin end)
   "Fix progress bars for e.g. apt(8).
 Display progress in the mode line instead."
