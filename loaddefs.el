@@ -776,44 +776,6 @@ Call `j-console' and setup shortcuts.
 
 ;;;***
 
-;;;### (autoloads nil "modes/ora-magit" "modes/ora-magit.el" (0 0
-;;;;;;  0 0))
-;;; Generated autoloads from modes/ora-magit.el
-
-(autoload 'ora-magit-status-hook "modes/ora-magit" "\
-
-
-\(fn)" nil nil)
-
-(autoload 'ora-magit-log-hook "modes/ora-magit" "\
-
-
-\(fn)" nil nil)
-
-(autoload 'ora-magit-commit-hook "modes/ora-magit" "\
-
-
-\(fn)" nil nil)
-
-(autoload 'ora-magit-diff-hook "modes/ora-magit" "\
-
-
-\(fn)" nil nil)
-
-(autoload 'ora-magit-branch-manager-hook "modes/ora-magit" "\
-
-
-\(fn)" nil nil)
-
-(autoload 'ora-git-commit-hook "modes/ora-magit" "\
-
-
-\(fn)" nil nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "modes/ora-magit" '("ora-")))
-
-;;;***
-
 ;;;### (autoloads nil "modes/ora-makefile" "modes/ora-makefile.el"
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from modes/ora-makefile.el
@@ -854,39 +816,6 @@ Transform Elisp-style code references to Markdown-style.
 (autoload 'ora-mu4e-compose-hook "modes/ora-mu4e" nil nil nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "modes/ora-mu4e" '("ora-mml-attach-file")))
-
-;;;***
-
-;;;### (autoloads nil "modes/ora-nextmagit" "modes/ora-nextmagit.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from modes/ora-nextmagit.el
-
-(autoload 'ora-nextmagit-status-hook "modes/ora-nextmagit" "\
-
-
-\(fn)" nil nil)
-
-(autoload 'ora-nextmagit-log-hook "modes/ora-nextmagit" "\
-
-
-\(fn)" nil nil)
-
-(autoload 'ora-nextmagit-commit-hook "modes/ora-nextmagit" "\
-
-
-\(fn)" nil nil)
-
-(autoload 'ora-nextmagit-diff-hook "modes/ora-nextmagit" "\
-
-
-\(fn)" nil nil)
-
-(autoload 'ora-nextmagit-branch-manager-hook "modes/ora-nextmagit" "\
-
-
-\(fn)" nil nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "modes/ora-nextmagit" '("ora-m" "endless/add-PR-fetch")))
 
 ;;;***
 

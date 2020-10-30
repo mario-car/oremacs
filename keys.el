@@ -81,7 +81,6 @@
 (global-set-key (kbd "C-x o") 'ace-window)
 (global-set-key (kbd "C-x p") 'proced)
 (global-set-key (kbd "C-x C-i") 'flyspell-correct-word-before-point)
-(global-set-key (kbd "C-x g") 'bmk/magit-status)
 ;;* Functional keys shortcuts
 (global-set-key (kbd "<f1> a") 'apropos)
 (global-set-key (kbd "<f1> f") 'counsel-describe-function)

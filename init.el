@@ -254,22 +254,15 @@
   :commands find-file-in-project)
 (use-package magit
   :commands magit-status
+  :bind (("C-x g" . #'magit-status))
   :config
   (progn
     (ignore-errors
       (diminish 'magit-auto-revert-mode))
     (setq magit-completing-read-function 'ivy-completing-read)
     (setq magit-item-highlight-face 'bold)
-    (setq magit-repo-dirs-depth 1)
-    (setq magit-repo-dirs
-          (mapcar
-           (lambda (dir)
-             (substring dir 0 -1))
-           (cl-remove-if-not
-            (lambda (project)
-              (unless (file-remote-p project)
-                (file-directory-p (concat project "/.git/"))))
-            (projectile-relevant-known-projects))))))
+    (setq magit-repo-dirs-depth 1)))
+
 (use-package compile
   :diminish compilation-in-progress
   :config
