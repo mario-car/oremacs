@@ -37,7 +37,6 @@
 (add-hook 'Buffer-menu-mode-hook 'ora-Buffer-menu-hook)
 (add-hook 'bookmark-bmenu-mode-hook 'ora-bmenu-hook)
 (add-hook 'vc-dir-mode-hook 'ora-vc-dir-hook)
-(add-hook 'git-commit-mode-hook 'ora-git-commit-hook)
 (add-hook 'ediff-mode-hook 'ora-ediff-hook)
 (add-hook 'diff-mode-hook 'ora-diff-hook)
 (add-hook 'package-menu-mode-hook 'ora-package-menu-hook)
