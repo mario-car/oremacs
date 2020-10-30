@@ -1,26 +1,13 @@
 # A tweak-able (and tweaked) Emacs config
 
-This is my Emacs configuration. There are many like it, but this one is mine.
-
-Actually, there aren't many like it, since it's highly personalized, with the key binding setup relying substantially on `xmodmap`.
-
-This config is easy to replicate, perhaps easier than most starter kits out there.  But it's not meant for Emacs novices. You need to know at least some basic Elisp (like what `;` and `define-key` do).
-
-It's up to you on how much of it you want to use:
-
-- You can try to use it verbatim if you have the same opinion of ergonomics as me.
-- You can re-define the keys but keep the package configurations.
-- You can wipe everything and just keep the basic extensible and replicable structure.
-
-I'm using only GNU/Linux, but there's no reason for it not to work on other systems.
-
-# Requirements
-
-Emacs 24 is required. Obviously, newer versions are better, but the default `emacs24` that you get from the package manager should work.
+This is abo-abo Emacs configuration fork.
+Instead of cloning this config, I suggest to follow abo-abo and his original config: https://github.com/abo-abo/oremacs
 
 # Installation
 
 This config doesn't assume to become your main config when you install it.  It installs in-place in the git directory and will start from there without touching your main config.  But you still get access to all your stuff, like bookmarks stored in your actual `~/.emacs.d/` etc.
+
+How to install abo-abo oremacs:
 
 ```sh
 cd ~/git
@@ -29,6 +16,7 @@ cd oremacs
 make install
 ```
 
+This fork follows the same guiding principle as original. Clone, then "make install"
 ## Running
 
 Run without updating:
@@ -70,35 +58,6 @@ Since these packages take a long time to byte compile, they are updated not with
 ## Bankruptcy-proof
 
 It's hard to become Emacs-bankrupt with this config, since the config is composed of many independent pieces that you can simply ignore if you don't need them.
-
-## Anti-RSI QWERTY mod
-
-The config comes with its own `.Xmodmap` that makes <kbd>;</kbd> into an additional modifier. RSI savers:
-
-- <kbd>;-v</kbd> instead of <kbd>Enter</kbd>.
-- <kbd>;-o</kbd> instead of <kbd>Backspace</kbd>.
-- <kbd>;-f</kbd> instead of <kbd>Shift-9</kbd> and <kbd>Shift-0</kbd>.
-- <kbd>;-a</kbd> instead of <kbd>-</kbd>.
-- <kbd>;-s</kbd> instead of <kbd>Shift--</kbd>.
-- <kbd>;-q</kbd> instead of <kbd>Shift-'</kbd>.
-- <kbd>;-e</kbd> instead of <kbd>=</kbd>.
-- <kbd>;-u</kbd> in addition / instead of <kbd>C-u</kbd>.
-
-And obviously the replacements for the two keys that the mod takes away:
-
-- <kbd>;-j</kbd> instead of <kbd>;</kbd>.
-- <kbd>;-d</kbd> instead of <kbd>Shift-;</kbd>.
-
-One more Elisp-level RSI-saver is the swap between <kbd>C-p</kbd> and <kbd>C-h</kbd>. Moving up/down line is very important, and it's nice to have these keys close, which <kbd>C-n</kbd> and <kbd>C-h</kbd> are.
-
-It also includes:
-
-- a bunch of Hydras that save you key strokes.
-- `lispy-mode` which quickens any LISP mode, especially Elisp.
-- `worf-mode` which quickens `org-mode`.
-- `ivy-mode` which quickens all completion.
-- `swiper` which quickens `isearch` (by replacing it).
-- C/C++ is customized with `function-args-mode` and a bunch of hacks.
 
 ## Org mode starter
 
