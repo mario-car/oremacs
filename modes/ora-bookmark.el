@@ -9,14 +9,6 @@
   "Handle a function bookmark BOOKMARK."
   (funcall (bookmark-prop-get bookmark 'function)))
 
-(defun bmk/magit-status ()
-  "Bookmark for `magit-status'."
-  (interactive)
-  (when (buffer-file-name)
-    (delete-trailing-whitespace)
-    (save-buffer))
-  (call-interactively 'magit-status))
-
 (defun bmk/scratch ()
   "Bookmark for *scratch*."
   (interactive)

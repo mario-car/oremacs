@@ -252,24 +252,43 @@
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 (use-package find-file-in-project
   :commands find-file-in-project)
+
+;; Package `magit' provides a full graphical interface for Git within
+;; Emacs.
 (use-package magit
-  :commands magit-status
+  :bind (;; This is the primary entry point for Magit. Binding to C-x
+         ;; g is recommended in the manual:
+         ;; https://magit.vc/manual/magit.html#Getting-Started
+         ("C-x g" . #'magit-status)
+         ;; Alternate transient entry point; binding recommended in
+         ;; <https://magit.vc/manual/magit.html#Transient-Commands>.
+         ("C-x M-g" . #'magit-dispatch)
+         ;; Completing the trio of bindings in `magit-file-mode-map'.
+         ("C-c M-g" . #'magit-file-dispatch))
+
+  :init
+
+  ;; Suppress the message we get about "Turning on
+  ;; magit-auto-revert-mode" when loading Magit.
+  (setq magit-no-message '("Turning on magit-auto-revert-mode..."))
+
   :config
-  (progn
-    (ignore-errors
-      (diminish 'magit-auto-revert-mode))
-    (setq magit-completing-read-function 'ivy-completing-read)
-    (setq magit-item-highlight-face 'bold)
-    (setq magit-repo-dirs-depth 1)
-    (setq magit-repo-dirs
-          (mapcar
-           (lambda (dir)
-             (substring dir 0 -1))
-           (cl-remove-if-not
-            (lambda (project)
-              (unless (file-remote-p project)
-                (file-directory-p (concat project "/.git/"))))
-            (projectile-relevant-known-projects))))))
+
+  ;; Don't try to save unsaved buffers when using Magit. We know
+  ;; perfectly well that we need to save our buffers if we want Magit
+  ;; to see them.
+  (setq magit-save-repository-buffers nil)
+
+  (transient-append-suffix
+    'magit-merge "-n"
+    '("-u" "Allow unrelated" "--allow-unrelated-histories"))
+
+  (transient-append-suffix 'magit-pull "-r"
+    '("-a" "Autostash" "--autostash"))
+
+  (transient-append-suffix 'magit-fetch "-t"
+    '("-u" "Unshallow" "--unshallow")))
+
 (use-package compile
   :diminish compilation-in-progress
   :config

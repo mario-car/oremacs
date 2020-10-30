@@ -109,7 +109,7 @@
        (git-pkgs (cl-intersection git-dirs all-pkgs)))
   (setq straight-built-in-pseudo-packages
         (append
-         '(emacs python uniquify dired dired-x magit cook)
+         '(emacs python uniquify dired dired-x cook)
          (and (memq 'swiper git-dirs)
               '(swiper ivy ivy-hydra lv counsel))
          git-pkgs))
