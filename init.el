@@ -84,6 +84,8 @@
 (setq delete-old-versions t)
 (setq version-control t)
 (setq create-lockfiles nil)
+;; bind super key to other than windows key
+(define-key function-key-map (kbd "<f13>") 'event-apply-super-modifier)
 ;;* Bootstrap
 ;;** autoloads
 (load (concat emacs-d "loaddefs.el") nil t)
