@@ -44,6 +44,7 @@
     (eltex :host github :repo "abo-abo/eltex")
     evil
     exec-path-from-shell
+    expand-region
     find-file-in-project
     flx
     flycheck
@@ -86,11 +87,11 @@
     request
     rust-mode
     slime
+    shell-pop
     (smex :host github :repo "abo-abo/smex")
     tea-time
     (touchpad :host github :repo "abo-abo/touchpad")
     transpose-frame
-    ukrainian-holidays
     unicode-fonts
     use-package
     wgrep
