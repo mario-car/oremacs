@@ -28,6 +28,7 @@
     company-jedi
     counsel
     (counsel-keepassxc :host github :repo "tangxinfa/counsel-keepassxc")
+    dap-mode
     define-word
     diminish
     (orly :host github :repo "abo-abo/orly")
@@ -62,8 +63,10 @@
     jedi
     lispy
     (lpy :host github :repo "abo-abo/lpy")
+    lsp-ivy
     lsp-java
     lsp-mode
+    lsp-ui
     magit
     make-it-so
     markdown-mode
@@ -96,6 +99,7 @@
     worf
     yaml-mode
     yasnippet)
+
   "List of packages that I like.")
 
 (let* ((all-pkgs (mapcar
