@@ -78,14 +78,21 @@
 ;;** Rest
 (csetq browse-url-browser-function 'browse-url-firefox)
 (csetq browse-url-firefox-program (whicher "firefox"))
+;; bind super key to other than windows key
+(define-key function-key-map (kbd "<Scroll_Lock>") 'event-apply-super-modifier)
+;; more useful frame title, that show either a file or a
+;; buffer name (if the buffer isn't visiting a file)
+(setq frame-title-format
+      '((:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name))
+                 "%b"))))
+
 ;;*** Backups
 (setq backup-by-copying t)
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 (setq delete-old-versions t)
 (setq version-control t)
 (setq create-lockfiles nil)
-;; bind super key to other than windows key
-(define-key function-key-map (kbd "<Scroll_Lock>") 'event-apply-super-modifier)
 ;;* Bootstrap
 ;;** autoloads
 (load (concat emacs-d "loaddefs.el") nil t)
