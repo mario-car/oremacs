@@ -17,6 +17,7 @@
     auto-compile
     auto-yasnippet
     avy
+    avy-zap
     bash-completion
     bbdb
     ccls
