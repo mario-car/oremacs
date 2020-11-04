@@ -327,6 +327,9 @@
   (add-to-list 'magic-mode-alist (cons "ELF" 'elf-mode)))
 (use-package expand-region
   :bind ("C-=" . er/expand-region))
+(use-package avy-zap
+  :bind (("M-z" . avy-zap-to-char-dwim)
+         ("M-Z" . avy-zap-up-to-char-dwim)))
 
 (add-to-list 'warning-suppress-types '(undo discard-info))
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
