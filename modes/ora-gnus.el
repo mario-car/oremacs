@@ -18,7 +18,6 @@
 (define-key gnus-summary-mode-map "j" 'gnus-summary-next-article)
 (define-key gnus-summary-mode-map "k" 'gnus-summary-prev-article)
 (define-key gnus-summary-mode-map "h" 'gnus-summary-up-thread)
-(define-key gnus-summary-mode-map "\C-t" nil)
 (define-key gnus-summary-mode-map "v" 'gnus-summary-scroll-up)
 (define-key gnus-summary-mode-map (kbd "DEL") 'gnus-summary-clear-mark-backward)
 ;;* group

@@ -198,7 +198,6 @@
 (define-key java-toggle-map "\C-a" 'java-toggle-abstract)
 (define-key java-toggle-map "\C-s" 'java-toggle-static)
 (define-key java-toggle-map "\C-f" 'java-toggle-final)
-(define-key java-toggle-map "\C-t" 'java-toggle-transient)
 (define-key java-toggle-map "\C-v" 'java-toggle-volatile)
 (define-key java-toggle-map "\C-y" 'java-toggle-synchronized)
 (define-key java-toggle-map "\C-n" 'java-toggle-native)
