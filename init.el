@@ -336,6 +336,9 @@
   (setq-default beacon-size 20)
   (setq-default beacon-color "#DC143C")
   (beacon-mode 1))
+(use-package fullframe
+  :config
+  (fullframe magit-status magit-mode-quit-window))
 
 (add-to-list 'warning-suppress-types '(undo discard-info))
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))

@@ -51,6 +51,7 @@
     flx
     flycheck
     function-args
+    fullframe
     geiser
     (google-c-style :host github :repo "google/styleguide" :branch "gh-pages")
     gtk-pomodoro-indicator
