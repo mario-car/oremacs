@@ -325,6 +325,9 @@
   :commands elf-mode
   :init
   (add-to-list 'magic-mode-alist (cons "ELF" 'elf-mode)))
+(use-package expand-region
+  :bind ("C-=" . er/expand-region))
+
 (add-to-list 'warning-suppress-types '(undo discard-info))
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 (ora-advice-add 'semantic-idle-scheduler-function :around #'ignore)
