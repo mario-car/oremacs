@@ -330,6 +330,12 @@
 (use-package avy-zap
   :bind (("M-z" . avy-zap-to-char-dwim)
          ("M-Z" . avy-zap-up-to-char-dwim)))
+(use-package beacon
+  :config
+  (setq-default beacon-lighter "")
+  (setq-default beacon-size 20)
+  (setq-default beacon-color "#DC143C")
+  (beacon-mode 1))
 
 (add-to-list 'warning-suppress-types '(undo discard-info))
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))

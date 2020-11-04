@@ -20,6 +20,7 @@
     avy-zap
     bash-completion
     bbdb
+    beacon
     ccls
     cider
     (clojure-semantic :host github :repo "abo-abo/clojure-semantic")
