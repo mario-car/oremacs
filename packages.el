@@ -58,6 +58,7 @@
     haskell-mode
     headlong
     helm-make
+    helpful
     (htmlize :host github :repo "abo-abo/htmlize")
     hydra
     (iedit :host github :repo "abo-abo/iedit")

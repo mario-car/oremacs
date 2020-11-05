@@ -340,6 +340,25 @@
 (use-package fullframe
   :config
   (fullframe magit-status magit-mode-quit-window))
+;; Package `helpful' provides a complete replacement for the built-in
+;; Emacs help facility which provides much more contextual information
+;; in a better format.ff
+(use-package helpful
+  :bind (;; Remap standard commands.
+         ([remap describe-function] . #'helpful-callable)
+         ([remap describe-variable] . #'helpful-variable)
+         ([remap describe-symbol]   . #'helpful-symbol)
+         ([remap describe-key]      . #'helpful-key)
+
+         ;; Suggested bindings from the documentation at
+         ;; https://github.com/Wilfred/helpful.
+         :map help-map
+         ("F" . #'helpful-function)
+         ("M-f" . #'helpful-macro)
+         ("C" . #'helpful-command)
+         :map global-map
+         ("C-c C-d" . #'helpful-at-point)))
+
 
 (add-to-list 'warning-suppress-types '(undo discard-info))
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
