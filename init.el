@@ -108,8 +108,6 @@
         ("gnu" . "http://elpa.gnu.org/packages/")))
 (setq package-pinned-packages '((yasnippet . "gnu")))
 (let ((file-name-handler-alist nil))
-  (require 'eclipse-theme)
-  (load-theme 'eclipse t)
   (require 'use-package)
   (require 'smex)
   (require 'warnings))
@@ -381,6 +379,25 @@
     (make-variable-buffer-local 'undo-tree-visualizer-diff)
     (setq-default undo-tree-visualizer-diff t))
   :config (global-undo-tree-mode))
+(use-package zerodark-theme
+  :functions (true-color-p)
+  :config
+      (let ((background-purple (if (true-color-p) "#48384c" "#5f5f5f"))
+          (class '((class color) (min-colors 89)))
+          (green (if (true-color-p) "#98be65" "#87af5f"))
+          (orange (if (true-color-p) "#da8548" "#d7875f"))
+          (purple (if (true-color-p) "#c678dd" "#d787d7")))
+      (custom-theme-set-faces
+       'zerodark
+       `(selectrum-current-candidate
+         ((,class (:background
+                   ,background-purple
+                   :weight bold
+                   :foreground ,purple))))
+       `(selectrum-primary-highlight ((,class (:foreground ,orange))))
+       `(selectrum-secondary-highlight ((,class (:foreground ,green))))))
+
+    (enable-theme 'zerodark))
 
 
 (add-to-list 'warning-suppress-types '(undo discard-info))
