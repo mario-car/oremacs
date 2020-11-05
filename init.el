@@ -370,6 +370,17 @@
   (setq which-key-idle-secondary-delay 1e-100)
   (which-key-mode +1)
   :diminish which-key-mode)
+(use-package undo-tree
+  :diminish
+  :init
+  (setq undo-tree-visualizer-timestamps t
+        undo-tree-enable-undo-in-region nil
+        undo-tree-auto-save-history nil)
+  ;; ;; HACK: keep the diff window
+  (with-no-warnings
+    (make-variable-buffer-local 'undo-tree-visualizer-diff)
+    (setq-default undo-tree-visualizer-diff t))
+  :config (global-undo-tree-mode))
 
 
 (add-to-list 'warning-suppress-types '(undo discard-info))

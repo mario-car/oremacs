@@ -96,6 +96,7 @@
     tea-time
     (touchpad :host github :repo "abo-abo/touchpad")
     transpose-frame
+    undo-tree
     unicode-fonts
     use-package
     visual-regexp
