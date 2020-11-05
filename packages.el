@@ -28,6 +28,7 @@
     command-log-mode
     company
     company-jedi
+    company-lsp
     counsel
     (counsel-keepassxc :host github :repo "tangxinfa/counsel-keepassxc")
     dap-mode
@@ -39,6 +40,7 @@
     docker
     docker-tramp
     dockerfile-mode
+    dumb-jump
     eclipse-theme
     eglot
     elf-mode
@@ -105,7 +107,8 @@
     which-key
     worf
     yaml-mode
-    yasnippet)
+    yasnippet
+    zerodark-theme)
 
   "List of packages that I like.")
 
