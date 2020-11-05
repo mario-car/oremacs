@@ -358,6 +358,8 @@
          ("C" . #'helpful-command)
          :map global-map
          ("C-c C-d" . #'helpful-at-point)))
+(use-package visual-regexp
+  :bind (([remap query-replace] . #'vr/query-replace)))
 
 
 (add-to-list 'warning-suppress-types '(undo discard-info))

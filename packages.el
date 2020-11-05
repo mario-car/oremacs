@@ -98,6 +98,7 @@
     transpose-frame
     unicode-fonts
     use-package
+    visual-regexp
     wgrep
     (whicher :host github :repo "abo-abo/whicher")
     which-key
