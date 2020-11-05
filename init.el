@@ -360,6 +360,16 @@
          ("C-c C-d" . #'helpful-at-point)))
 (use-package visual-regexp
   :bind (([remap query-replace] . #'vr/query-replace)))
+(use-package which-key
+  :config
+  ;; We configure it so that `which-key' is triggered by typing C-h
+  ;; during a key sequence (the usual way to show bindings). See
+  ;; <https://github.com/justbur/emacs-which-key#manual-activation>.
+  (setq which-key-show-early-on-C-h t)
+  (setq which-key-idle-delay most-positive-fixnum)
+  (setq which-key-idle-secondary-delay 1e-100)
+  (which-key-mode +1)
+  :diminish which-key-mode)
 
 
 (add-to-list 'warning-suppress-types '(undo discard-info))
