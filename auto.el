@@ -66,27 +66,6 @@
   "Placeholder for query start.")
 
 ;;;###autoload
-(defun ora-query-replace (from)
-  (interactive
-   (list
-    (read-regexp
-     "Query replace"
-     (let ((bounds (lispy--bounds-dwim)))
-       (setq ora-qr-beg (car bounds))
-       (when ora-qr-beg
-         (kill-new
-          (buffer-substring-no-properties
-           ora-qr-beg
-           (cdr bounds))))))))
-  (when ora-qr-beg
-    (goto-char ora-qr-beg)
-    (setq ora-qr-beg))
-  (deactivate-mark)
-  (query-replace
-   from
-   (query-replace-read-to from "Query replace" nil)))
-
-;;;###autoload
 (defun ora-replace-regexp (arg)
   "Works on current line if there's no region.
 When ARG is non-nil launch `query-replace-regexp'."

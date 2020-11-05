@@ -24,7 +24,6 @@
 (global-set-key (kbd "<C-return>") nil)                        ; [v]
 
 ;;* Meta shortcuts
-(global-set-key (kbd "M-%") 'ora-query-replace)
 (global-set-key (kbd "M-.") nil)
 (global-set-key (kbd "M-m") 'lispy-mark-symbol)
 (global-set-key (kbd "M-p") 'avy-pop-mark)

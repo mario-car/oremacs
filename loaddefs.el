@@ -12,10 +12,6 @@
 
 (autoload 'ora-project "auto" nil t nil)
 
-(autoload 'ora-query-replace "auto" "\
-
-
-\(fn FROM)" t nil)
 
 (autoload 'ora-replace-regexp "auto" "\
 Works on current line if there's no region.
