@@ -98,8 +98,6 @@
 (global-set-key [C-f7] 'winner-redo)
 (global-set-key [f8] 'bookmark-bmenu-list)
 (global-set-key [C-f8] 'bookmark-set)
-(global-set-key [f9] 'delete-other-windows)
-(global-set-key [C-f9] 'delete-window)
 (global-set-key [f11] 'ora-org-clock-out)
 (global-set-key [C-f11] 'org-clock-goto)
 (global-set-key [f12] 'orfu-agenda-day)

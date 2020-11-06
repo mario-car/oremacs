@@ -397,7 +397,14 @@
        `(selectrum-primary-highlight ((,class (:foreground ,orange))))
        `(selectrum-secondary-highlight ((,class (:foreground ,green))))))
 
-    (enable-theme 'zerodark))
+      (enable-theme 'zerodark))
+(use-package shell-pop
+  :bind ([f9] . shell-pop)
+  :init (setq shell-pop-window-size 30
+              shell-pop-shell-type
+              (quote ("shell" "*shell*" (lambda nil (term shell-pop-term-shell))))
+              ))
+
 
 
 (add-to-list 'warning-suppress-types '(undo discard-info))
