@@ -404,7 +404,7 @@
               shell-pop-shell-type
               (quote ("shell" "*shell*" (lambda nil (term shell-pop-term-shell))))
               ))
-
+(require 'config-lsp)
 
 
 (add-to-list 'warning-suppress-types '(undo discard-info))
