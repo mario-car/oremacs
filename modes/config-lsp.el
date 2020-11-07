@@ -1,3 +1,5 @@
+;; init-lsp.el --- Initialize LSP configurations.	-*- lexical-binding: t -*-
+
 (use-package lsp-mode
      :commands (lsp-enable-which-key-integration
                 lsp-format-buffer
@@ -120,4 +122,4 @@
        :hook (java-mode . (lambda () (require 'lsp-java))))
 
 
-(provide 'ora-lsp)
+(provide 'config-lsp)
