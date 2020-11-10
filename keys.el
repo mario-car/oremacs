@@ -1,7 +1,6 @@
 ;; keys -*- lexical-binding: t -*-
 ;;* Ctrl shortcuts
 (global-set-key "\C-a" 'ora-move-beginning-of-line)      ; 'move-beginning-of-line
-(global-set-key "\C-o" 'ora-open-line)                   ; 'open-line
 (global-set-key "\C-r" 'counsel-grep-or-swiper)          ; 'isearch-backward
 (global-set-key "\C-s" 'swiper)                          ; 'isearch-forward
 ;; (global-set-Key (kbd "C-z") 'capitalize-word-toggle)
@@ -267,24 +266,6 @@ _v_ariable     valu_e_"
   ("f" forward-word)
   ("b" backward-word)
   ("w" kill-region :exit t))
-
-(defun ora-open-line ()
-  (interactive)
-  (require 'auto-yasnippet)
-  (unless (cond
-            ((progn
-               (unless yas-global-mode
-                 (yas-global-mode 1))
-               (yas--snippets-at-point))
-             (yas-next-field-or-maybe-expand))
-            ((ignore-errors
-               (setq aya-invokation-point (point))
-               (setq aya-invokation-buffer (current-buffer))
-               (setq aya-tab-position (- (point) (line-beginning-position)))
-               (let ((yas-fallback-behavior 'return-nil))
-                 (yas-expand))))
-            ((funcall 'tiny-expand)))
-    (hydra-o/body)))
 
 (defhydra hydra-o (:exit t)
   "outl"

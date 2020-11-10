@@ -157,8 +157,6 @@
   :interpreter ("octave" . octave-mode))
 ;;* Use Package
 ;;** expansion
-(use-package tiny
-  :commands tiny-expand)
 (use-package yasnippet
   :diminish yas-minor-mode
   :config (yas-global-mode))
