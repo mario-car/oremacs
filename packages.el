@@ -108,6 +108,7 @@
     worf
     yaml-mode
     yasnippet
+    yasnippet-snippets
     zerodark-theme)
 
   "List of packages that I like.")
