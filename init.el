@@ -389,10 +389,10 @@
       (enable-theme 'zerodark))
 (use-package shell-pop
   :bind ([f9] . shell-pop)
-  :init (setq shell-pop-window-size 30
-              shell-pop-shell-type
-              (quote ("shell" "*shell*" (lambda nil (term shell-pop-term-shell))))
-              ))
+  :init (setq shell-pop-full-span t)
+  :config
+  (push (cons "\\*shell\\*" display-buffer--same-window-action) display-buffer-alist))
+
 (require 'config-lsp)
 
 
