@@ -80,7 +80,7 @@
 (csetq browse-url-browser-function 'browse-url-firefox)
 (csetq browse-url-firefox-program (whicher "firefox"))
 ;; bind super key to other than windows key
-(define-key function-key-map (kbd "<Scroll_Lock>") 'event-apply-super-modifier)
+(define-key function-key-map (kbd "<f20>") 'event-apply-super-modifier)
 ;; more useful frame title, that show either a file or a
 ;; buffer name (if the buffer isn't visiting a file)
 (setq frame-title-format
