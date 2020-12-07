@@ -765,13 +765,6 @@ Call `j-console' and setup shortcuts.
 
 ;;;***
 
-;;;### (autoloads nil "modes/ora-lsp" "modes/ora-lsp.el" (0 0 0 0))
-;;; Generated autoloads from modes/ora-lsp.el
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "modes/ora-lsp" '("lsp-mode-line")))
-
-;;;***
-
 ;;;### (autoloads nil "modes/ora-makefile" "modes/ora-makefile.el"
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from modes/ora-makefile.el
