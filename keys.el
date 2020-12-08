@@ -26,7 +26,6 @@
 (global-set-key (kbd "M-,") 'pop-tag-mark)
 (global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "M-y") 'counsel-yank-pop)
-(global-set-key (kbd "M-a") 'ace-link)
 
 ;;* Super shortcuts
 (global-set-key (kbd "s-7") 'mc/mark-next-like-this)
@@ -44,7 +43,7 @@
 (global-set-key (kbd "s-f") nil)
 (global-set-key (kbd "s-g") 'upcase-word-toggle)
 (global-set-key (kbd "s-h") 'switch-to-buffer-other-window)
-(global-set-key (kbd "s-j") nil)
+(global-set-key (kbd "s-j") 'ace-link)
 (global-set-key (kbd "s-l") 'rgrep)
 (global-set-key (kbd "s-z") nil)
 (global-set-key (kbd "s-x") nil)
