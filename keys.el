@@ -3,24 +3,20 @@
 (global-set-key "\C-a" 'ora-move-beginning-of-line)      ; 'move-beginning-of-line
 (global-set-key "\C-r" 'counsel-grep-or-swiper)          ; 'isearch-backward
 (global-set-key "\C-s" 'swiper)                          ; 'isearch-forward
-;; (global-set-Key (kbd "C-z") 'capitalize-word-toggle)
-                                        ; capitili[z]e
+(global-set-key (kbd "C-z") 'capitalize-word-toggle)     ; capitili[z]e
 (global-set-key (kbd "C-.") 'comment-dwim)
 (global-set-key (kbd "C-,") 'lispy-kill-at-point)
 (global-set-key (kbd "C-'") 'avy-goto-char-timer)
 (global-set-key (kbd "C-\\") 'hydra-org-objects/body)
-(global-set-key (kbd "C-S-\\") 'mc/mark-next-like-this)
 ;;* Ctrl Meta shortcuts
 (global-set-key (kbd "C-M-,") 'lispy-mark)
 (global-set-key (kbd "C-M-q") 'ora-unfill-paragraph)
-(global-set-key [C-tab] 'ora-ctrltab)                          ; [i]
-(global-set-key [C-backspace] 'ora-backward-delete-whitespace) ; [o]
-;; (global-set-key (kbd "C--") 'org-capture)                   ; [a]
-(global-set-key (kbd "C-:") 'ora-dired-jump)                   ; [d]
-(global-set-key (kbd "C->") 'upcase-word-toggle)               ; [g]
-(global-set-key (kbd "C-<") 'rgrep)                            ; [l]
-(global-set-key (kbd "C-+") nil)                               ; [z]
-(global-set-key (kbd "<C-return>") nil)                        ; [v]
+;; (global-set-key (kbd "C--") 'org-capture)
+(global-set-key (kbd "C-:") 'ora-dired-jump)
+(global-set-key (kbd "C->") 'upcase-word-toggle)
+(global-set-key (kbd "C-<") 'rgrep)
+(global-set-key (kbd "C-+") nil)
+(global-set-key (kbd "<C-return>") nil)
 
 ;;* Meta shortcuts
 (global-set-key (kbd "M-.") nil)
@@ -31,6 +27,47 @@
 (global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "M-y") 'counsel-yank-pop)
 (global-set-key (kbd "M-a") 'ace-link)
+
+;;* Super shortcuts
+(global-set-key (kbd "s-7") 'mc/mark-next-like-this)
+(global-set-key (kbd "s-q") 'ora-single-quotes)
+(global-set-key (kbd "s-w") 'aya-create)
+(global-set-key (kbd "s-e") 'eval-expression)
+(global-set-key (kbd "s-r") 'ora-eval-other-window)
+(global-set-key (kbd "s-t") nil)
+(global-set-key (kbd "s-y") 'aya-create)
+(global-set-key (kbd "s-u") 'moo-jump-local)
+(global-set-key (kbd "s-i") 'ora-ctrltab)
+(global-set-key (kbd "s-o") 'ora-backward-delete-whitespace)
+(global-set-key (kbd "s-p") nil)
+(global-set-key (kbd "s-a") 'org-capture)
+(global-set-key (kbd "s-f") nil)
+(global-set-key (kbd "s-g") 'upcase-word-toggle)
+(global-set-key (kbd "s-h") 'switch-to-buffer-other-window)
+(global-set-key (kbd "s-j") nil)
+(global-set-key (kbd "s-k") 'ora-kill-current-buffer)
+(global-set-key (kbd "s-l") 'rgrep)
+(global-set-key (kbd "s-z") nil)
+(global-set-key (kbd "s-x") nil)
+(global-set-key (kbd "s-c") nil)
+(global-set-key (kbd "s-v") nil)
+(global-set-key (kbd "s-b") nil)
+(global-set-key (kbd "s-n") 'ora-angles)
+(global-set-key (kbd "s-m") 'headlong-bookmark-jump-other)
+(global-set-key (kbd "s-Q") 'ora-quotes)
+(global-set-key (kbd "s-R") 'ora-brackets)
+(global-set-key (kbd "s-Y") 'aya-expand)
+(global-set-key (kbd "s-U") 'universal-argument)
+(global-set-key (kbd "s-I") 'hydra-avy/body)
+(global-set-key (kbd "s-P") 'avy-goto-char)
+(global-set-key (kbd "s-F") 'ora-parens)
+(global-set-key (kbd "s-H") 'ora-save-and-switch-buffer)
+(global-set-key (kbd "s-K") 'hydra-k/body)
+(global-set-key (kbd "s-X") 'lispy-right)
+(global-set-key (kbd "s-C") 'ora-braces)
+(global-set-key (kbd "s-B") nil)
+(global-set-key (kbd "s-N") 'ace-window)
+(global-set-key (kbd "s-M") 'headlong-bookmark-jump)
 
 ;;* C-c shortcuts
 (global-set-key (kbd "C-c a") 'org-agenda)
